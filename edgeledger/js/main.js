@@ -6,7 +6,14 @@ function initMap() {
     zoom: 9,
   });
 }
-
+// Sticky menu backgroud opacity
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 150) {
+    document.querySelector('#navbar').style.opacity = 0.9;
+  } else {
+    document.querySelector('#navbar').style.opacity = 1;
+  }
+});
 // Smooth Scrolling
 $('#navbar a, .btn').on('click', function (event) {
   if (this.hash !== '') {
